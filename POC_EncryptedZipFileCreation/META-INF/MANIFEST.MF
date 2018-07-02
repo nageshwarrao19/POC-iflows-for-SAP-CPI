@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+SAP-BundleType: IntegrationFlow
+Bundle-ClassPath: .,/src/main/resources/lib/zip4j_1.3.2.jar,/lib/zip4j
+ _1.3.2.jar
+Bundle-Version: 1.0.0
+SAP-RuntimeProfile: iflmap
+SAP-NodeType: IFLMAP
+Bundle-Name: POC_ZipFileCreation
+SAP-ArtifactId: bf785a66-4648-43ea-99ee-7867a750d404
+Bundle-ManifestVersion: 2
+Import-Package:  com.sap.it.nm.concurrent, com.sap.esb.camel.route.pol
+ icy, org.springframework.transaction.support, org.springframework.jdb
+ c.datasource, com.sap.esb.camel.ftp.file.filter.glob, org.mozilla.jav
+ ascript, org.codehaus.groovy.reflection, org.codehaus.groovy.runtime.
+ callsite, org.codehaus.groovy.runtime.typehandling, org.codehaus.groo
+ vy.runtime, groovy.lang, org.codehaus.groovy.jsr223, com.sap.gateway.
+ ip.core.customdev.util, com.sap.gateway.ip.core.customdev.logging, co
+ m.sap.gateway.ip.core.customdev.processor, com.sap.it.op.agent.trace.
+ cxf, com.sap.esb.size.limiter, com.sap.esb.camel.webservice.endpoint.
+ configurer, com.sap.esb.webservice.security.crypto.api, com.sap.esb.w
+ ebservice.policy.alternative.selector, org.apache.cxf.ws.security.wss
+ 4j, org.apache.wss4j.common.crypto, javax.security.auth.callback, com
+ .sap.it.iflow.model.runtime, com.sap.it.iflow.model, com.sap.sod.util
+ s.idoc.soap.interceptors, com.sap.sod.utils.idoc.soap.processors, com
+ .sap.sod.utils.idoc.soap, com.sap.sod.utils.soap.processors, com.sap.
+ sod.utils.soap, com.sap.sod.utils.encoding.processors, com.sap.sod.ut
+ ils.cxf.interceptors, com.sap.esb.camel.jdbc.inprogress.repository, c
+ om.sap.esb.camel.jdbc.idempotency.repository, com.sap.esb.camel.webse
+ rvice.cxfbinding, com.sap.esb.camel.mpl.access, com.sap.esb.camel.eip
+ .splitter, com.sap.esb.camel.xmljson, com.sap.it.op.ed, com.sap.it.op
+ .agent.ed.plugins.camel.api, com.sap.esb.webservice.authorization.sup
+ plier.api, org.apache.cxf.interceptor.security, net.sf.saxon.xpath, n
+ et.sf.saxon,com.sap.esb.application.services.cxf.interceptor,com.sap.
+ esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector.ca
+ mel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,javax.j
+ ms,javax.jws,javax.wsdl,javax.xml.bind.annotation,javax.xml.namespace
+ ,javax.xml.ws,org.apache.camel;version="2.8",org.apache.camel.builder
+ ;version="2.8",org.apache.camel.builder.xml;version="2.8",org.apache.
+ camel.component.cxf,org.apache.camel.model;version="2.8",org.apache.c
+ amel.processor;version="2.8",org.apache.camel.processor.aggregate;ver
+ sion="2.8",org.apache.camel.spring.spi;version="2.8",org.apache.commo
+ ns.logging,org.apache.cxf.binding,org.apache.cxf.binding.soap,org.apa
+ che.cxf.binding.soap.spring,org.apache.cxf.bus,org.apache.cxf.bus.res
+ ource,org.apache.cxf.bus.spring,org.apache.cxf.buslifecycle,org.apach
+ e.cxf.catalog,org.apache.cxf.configuration.jsse;version="2.5",org.apa
+ che.cxf.configuration.spring,org.apache.cxf.endpoint,org.apache.cxf.h
+ eaders,org.apache.cxf.interceptor,org.apache.cxf.management.counters;
+ version="2.5",org.apache.cxf.message,org.apache.cxf.phase,org.apache.
+ cxf.resource,org.apache.cxf.service.factory,org.apache.cxf.service.mo
+ del,org.apache.cxf.transport,org.apache.cxf.transport.common.gzip,org
+ .apache.cxf.transport.http,org.apache.cxf.transport.http.policy,org.a
+ pache.cxf.workqueue,org.apache.cxf.ws.rm.persistence,org.apache.cxf.w
+ sdl11,org.osgi.framework;version="1.6.0",org.slf4j;version="1.6",org.
+ springframework.beans.factory.config;version="3.0",com.sap.esb.camel.
+ security.cms,org.apache.camel.spi,com.sap.esb.webservice.audit.log,co
+ m.sap.esb.camel.endpoint.configurator.api,com.sap.esb.camel.jdbc.idem
+ potency.reorg,javax.sql,org.apache.camel.processor.idempotent.jdbc,or
+ g.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Bundle-SymbolicName: POC_ZipFileCreation; singleton:=true
+Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointC
+ onfigurator;multiple:=false;filter="(endpointType=SFTP)",com.sap.esb.
+ security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Trust
+ ManagerFactory;multiple:=false,javax.sql.DataSource;multiple:=false;f
+ ilter="(dataSourceName=default)",org.apache.cxf.ws.rm.persistence.RMS
+ tore;multiple:=false ,com.sap.esb.camel.security.cms.SignatureSplitte
+ r;multiple:=false,com.sap.esb.webservice.audit.log.AuditLogger
+
